@@ -2,9 +2,8 @@ class SquareCell {
   float x, y;
   boolean state; 
   boolean nextState;
-  SquareCell[] neighbours;
+  Cell[] neighbours;
   int _cellSize = 10;
-  int age = 0;
 
   SquareCell(float ex, float why, int cellSize) {
     _cellSize = cellSize;
@@ -16,11 +15,11 @@ class SquareCell {
       nextState = false;
     }
     state = nextState;
-    neighbours = new SquareCell[0];
+    neighbours = new Cell[0];
   }
 
   void addNeighbour(Cell cell) {
-    neighbours = (SquareCell[])append(neighbours, cell);
+    neighbours = (Cell[])append(neighbours, cell);
   }
 
   void calcNextState() {
@@ -43,34 +42,17 @@ class SquareCell {
        nextState = false;
      }
    }
-   if(state == nextState) {
-     age++;
-   } else {
-     age = 0;
-   }
   }
 
   void drawMe() {
-    println(frameCount);
-    println(neighbours.length);
     state = nextState;
     stroke(0);
-    int nbCount = 0;
-    for(SquareCell sq: neighbours) {
-      if(sq.state == state) {
-        nbCount++;
-      }
-    }
-    int ac = int(map(age, 0, 100, 0, 255));
-    int nc = int(map(nbCount, 0, 8, 0, 255));
     if (state == true) {
       fill(0);
     } else {
     fill(255);
    }
-   println(nbCount);
-   //ellipse(x, y, _cellSize, _cellSize);
-   rect(x, y, _cellSize, _cellSize);
+   ellipse(x, y, _cellSize, _cellSize);
    }
 
 }

@@ -1,11 +1,11 @@
-class GrowingSquares extends GOL {
+class Vichniac_Vote extends GOL {
   
   Cell[][] _cellArray;
   int _cellSize = 10;
   int _numX, _numY;
   
-  GrowingSquares() {
-    size(500, 300);
+  Vichniac_Vote() {
+    //size(500, 300);
     _numX = floor(width/_cellSize);
     _numY = floor(height/_cellSize);
     restart();
@@ -15,7 +15,7 @@ class GrowingSquares extends GOL {
     _cellArray = new Cell[_numX][_numY];
     for (int x = 0; x<_numX; x++) {
      for (int y = 0; y<_numY; y++) {
-       SquareCell newCell = new SquareCell(x, y, _cellSize);
+       VoteCell newCell = new VoteCell(x, y, _cellSize);
        _cellArray[x][y] = newCell;
      }
    }

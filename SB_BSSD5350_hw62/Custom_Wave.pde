@@ -1,10 +1,9 @@
-class GrowingSquares extends GOL {
-  
+class Custom_Wave extends GOL {
   Cell[][] _cellArray;
   int _cellSize = 10;
   int _numX, _numY;
   
-  GrowingSquares() {
+  Custom_Wave () {
     size(500, 300);
     _numX = floor(width/_cellSize);
     _numY = floor(height/_cellSize);
@@ -15,7 +14,7 @@ class GrowingSquares extends GOL {
     _cellArray = new Cell[_numX][_numY];
     for (int x = 0; x<_numX; x++) {
      for (int y = 0; y<_numY; y++) {
-       SquareCell newCell = new SquareCell(x, y, _cellSize);
+       CustomCell newCell = new CustomCell(x, y, _cellSize);
        _cellArray[x][y] = newCell;
      }
    }
@@ -32,14 +31,14 @@ class GrowingSquares extends GOL {
      if (below == _numY) { below = 0; }
      if (left < 0) { left = _numX-1; }
      if (right == _numX) { right = 0;}
-     _cellArray[x][y].addNeighbour(_cellArray[left][above]);
-     _cellArray[x][y].addNeighbour(_cellArray[left][y]);
-     _cellArray[x][y].addNeighbour(_cellArray[left][below]);
-     _cellArray[x][y].addNeighbour(_cellArray[x][below]);
-     _cellArray[x][y].addNeighbour(_cellArray[right][below]);
-     _cellArray[x][y].addNeighbour(_cellArray[right][y]);
-     _cellArray[x][y].addNeighbour(_cellArray[right][above]);
-     _cellArray[x][y].addNeighbour(_cellArray[x][above]);
+     _cellArray[x][y].addNeighbor(_cellArray[left][above]);
+     _cellArray[x][y].addNeighbor(_cellArray[left][y]);
+     _cellArray[x][y].addNeighbor(_cellArray[left][below]);
+     _cellArray[x][y].addNeighbor(_cellArray[x][below]);
+     _cellArray[x][y].addNeighbor(_cellArray[right][below]);
+     _cellArray[x][y].addNeighbor(_cellArray[right][y]);
+     _cellArray[x][y].addNeighbor(_cellArray[right][above]);
+     _cellArray[x][y].addNeighbor(_cellArray[x][above]);
      }
    }
   }

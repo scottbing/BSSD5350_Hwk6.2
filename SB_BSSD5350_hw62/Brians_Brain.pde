@@ -1,11 +1,10 @@
-class GrowingSquares extends GOL {
-  
+class Brians_Brain extends GOL {
   Cell[][] _cellArray;
   int _cellSize = 10;
   int _numX, _numY;
   
-  GrowingSquares() {
-    size(500, 300);
+  Brians_Brain() {
+    //size(500, 300);
     _numX = floor(width/_cellSize);
     _numY = floor(height/_cellSize);
     restart();
@@ -15,7 +14,7 @@ class GrowingSquares extends GOL {
     _cellArray = new Cell[_numX][_numY];
     for (int x = 0; x<_numX; x++) {
      for (int y = 0; y<_numY; y++) {
-       SquareCell newCell = new SquareCell(x, y, _cellSize);
+       BriansCell newCell = new BriansCell(x, y, _cellSize);
        _cellArray[x][y] = newCell;
      }
    }
@@ -66,4 +65,4 @@ class GrowingSquares extends GOL {
   void mousePressed() {
    restart();
   }
-}
+}   
