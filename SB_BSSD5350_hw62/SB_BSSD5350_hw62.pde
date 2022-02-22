@@ -59,7 +59,7 @@ void keyPressed() {
         loop();
         break; 
       case '6':
-        currGOL = new Scotts_Wave();
+        currGOL = new Scotts_Chaos();
         myTextarea.hide();
         loop();
         break;   
