@@ -26,6 +26,7 @@ void setup() {
                     +"  3. Brian's Brain\n"
                     +"  4. Custom Wave\n"
                     +"  5. Growing Squares\n"
+                    +"  6. Scotts Wave\n"
                     );
                     noLoop();  
 }
@@ -57,6 +58,11 @@ void keyPressed() {
         myTextarea.hide();
         loop();
         break; 
+      case '6':
+        currGOL = new Scotts_Wave();
+        myTextarea.hide();
+        loop();
+        break;   
       case 'r':
         currGOL = null;
         background(120);
