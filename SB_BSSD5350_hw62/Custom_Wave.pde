@@ -4,7 +4,7 @@ class Custom_Wave extends GOL {
   int _numX, _numY;
   
   Custom_Wave () {
-    size(500, 300);
+    //size(500, 300);
     _numX = floor(width/_cellSize);
     _numY = floor(height/_cellSize);
     restart();

@@ -52,7 +52,8 @@ class SquareCell {
     } else {
     fill(255);
    }
-   ellipse(x, y, _cellSize, _cellSize);
+   //ellipse(x, y, _cellSize, _cellSize);
+   rect(x, y, _cellSize, _cellSize);
    }
 
 }

@@ -1,21 +1,21 @@
 class GrowingSquares extends GOL {
   
-  Cell[][] _cellArray;
+  SquareCell[][] _cellArray;
   int _cellSize = 10;
   int _numX, _numY;
   
   GrowingSquares() {
-    size(500, 300);
+    //size(500, 300);
     _numX = floor(width/_cellSize);
     _numY = floor(height/_cellSize);
     restart();
   }
   
   void restart() {
-    _cellArray = new Cell[_numX][_numY];
+    _cellArray = new SquareCell[_numX][_numY];
     for (int x = 0; x<_numX; x++) {
      for (int y = 0; y<_numY; y++) {
-       Cell newCell = new Cell(x, y, _cellSize);
+       SquareCell newCell = new SquareCell(x, y, _cellSize);
        _cellArray[x][y] = newCell;
      }
    }
