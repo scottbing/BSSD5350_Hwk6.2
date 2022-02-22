@@ -17,7 +17,7 @@ class VoteCell {
   neighbours = new VoteCell[0];
 }
 
-void addNeighbour(Cell cell) {
+void addNeighbour(VoteCell cell) {
   neighbours = (VoteCell[])append(neighbours, cell);
 }
 

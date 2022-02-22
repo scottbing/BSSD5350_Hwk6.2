@@ -2,19 +2,19 @@
   float x, y;
   int state;
   int nextState;
-  Cell[] neighbours;
+  BriansCell[] neighbours;
    int _cellSize = 10;
 
-  BriansCell(float ex, float why, _cellSize) {
+  BriansCell(float ex, float why, int _cellSize) {
   x = ex * _cellSize;
   y = why * _cellSize; 
   nextState = int(random(2));
   state = nextState;
-  neighbours = new Cell[0];
+  neighbours = new BriansCell[0];
  }
 
- void addNeighbour(Cell cell) {
-   neighbours = (Cell[])append(neighbours, cell);
+ void addNeighbour(BriansCell cell) {
+   neighbours = (BriansCell[])append(neighbours, cell);
  }
 
  void calcNextState() {

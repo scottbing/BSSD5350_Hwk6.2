@@ -1,6 +1,6 @@
 class Vichniac_Vote extends GOL {
   
-  Cell[][] _cellArray;
+  VoteCell[][] _cellArray;
   int _cellSize = 10;
   int _numX, _numY;
   
@@ -12,7 +12,7 @@ class Vichniac_Vote extends GOL {
   }
   
   void restart() {
-    _cellArray = new Cell[_numX][_numY];
+    _cellArray = new VoteCell[_numX][_numY];
     for (int x = 0; x<_numX; x++) {
      for (int y = 0; y<_numY; y++) {
        VoteCell newCell = new VoteCell(x, y, _cellSize);

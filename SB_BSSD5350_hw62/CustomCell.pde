@@ -3,7 +3,7 @@
   float state;
   float nextState;
   float lastState = 0;
-  Cell[] neighbors;
+  CustomCell[] neighbors;
   int _cellSize = 10;
 
   CustomCell(float ex, float why, int cellSize) {
@@ -11,11 +11,11 @@
   y = why * _cellSize; 
   nextState = ((x/500) + (y/300)) * 14;
   state = nextState;
-  neighbors = new Cell[0];
+  neighbors = new CustomCell[0];
  }
 
-void addNeighbor(Cell cell) {
-  neighbors = (Cell[])append(neighbors, cell);
+void addNeighbor(CustomCell cell) {
+  neighbors = (CustomCell[])append(neighbors, cell);
 }
 
 void calcNextState() { 

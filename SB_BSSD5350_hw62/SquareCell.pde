@@ -2,7 +2,7 @@ class SquareCell {
   float x, y;
   boolean state; 
   boolean nextState;
-  Cell[] neighbours;
+  SquareCell[] neighbours;
   int _cellSize = 10;
 
   SquareCell(float ex, float why, int cellSize) {
@@ -15,11 +15,11 @@ class SquareCell {
       nextState = false;
     }
     state = nextState;
-    neighbours = new Cell[0];
+    neighbours = new SquareCell[0];
   }
 
-  void addNeighbour(Cell cell) {
-    neighbours = (Cell[])append(neighbours, cell);
+  void addNeighbour(SquareCell cell) {
+    neighbours = (SquareCell[])append(neighbours, cell);
   }
 
   void calcNextState() {

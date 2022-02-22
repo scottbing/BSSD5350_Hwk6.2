@@ -1,5 +1,5 @@
 class Brians_Brain extends GOL {
-  Cell[][] _cellArray;
+  BriansCell[][] _cellArray;
   int _cellSize = 10;
   int _numX, _numY;
   
@@ -11,7 +11,7 @@ class Brians_Brain extends GOL {
   }
   
   void restart() {
-    _cellArray = new Cell[_numX][_numY];
+    _cellArray = new BriansCell[_numX][_numY];
     for (int x = 0; x<_numX; x++) {
      for (int y = 0; y<_numY; y++) {
        BriansCell newCell = new BriansCell(x, y, _cellSize);
